@@ -1,0 +1,28 @@
+.catalog:
+  name: "Wordpress"
+  version: "v1.0.0-1.0"
+  description: "Docker Wordpress"
+  uuid: fogs-ag
+  questions: 
+    - variable: "DBPASSWORD"
+      label: "DB Password"
+      description: "Password for database access, must be 8 characters or longer"
+      required: true
+      default: password
+      type: "password"  
+    - variable: "VHOST"
+      label: "VHOST"
+      description: "Domain of server."
+      required: true
+      type: "string"  
+      default: "test.plattform.li"
+    - variable: "EMAIL"
+      label: "E-Mail Address"
+      description: "E-Mail"
+      required: true
+      type: "string"
+      default: "info@fogs.li"
+db:
+  scale: 1
+wordpress:
+  scale: 1
